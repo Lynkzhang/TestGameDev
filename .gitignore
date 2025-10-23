@@ -1,3 +1,22 @@
-# General ignores
+# OS-specific files
 .DS_Store
 Thumbs.db
+
+# Build artifacts
+bin/
+obj/
+
+# IDE files
+*.user
+*.suo
+*.userprefs
+*.csproj.user
+.vs/
+
+# Unity-generated directories (for future engine integration)
+Library/
+Temp/
+Logs/
+UserSettings/
+MemoryCaptures/
+Build/
