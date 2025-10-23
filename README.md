@@ -13,14 +13,16 @@ project or any other host runtime.
 
 ```
 ├── docs/
-│   └── slime-evolution-gdd.md     # High-level game design document (Chinese)
+│   ├── slime-evolution-gdd.md     # High-level game design document (Chinese)
+│   └── simulation-example.md      # Sample code illustrating the core services
 ├── src/
-│   └── SlimeEvolution.Core/
-│       ├── Configuration/         # Balance configuration & default databases
-│       ├── Domain/                # Core entities (slimes, traits, skills, etc.)
-│       ├── Services/              # Mutation & economy services
-│       ├── Tasks/                 # Lightweight quest/task evaluation logic
-│       └── Utilities/             # Random helpers & weighted pickers
+│   ├── SlimeEvolution.Core/
+│   │   ├── Configuration/         # Balance configuration & default databases
+│   │   ├── Domain/                # Core entities (slimes, traits, skills, etc.)
+│   │   ├── Services/              # Mutation & economy services
+│   │   ├── Tasks/                 # Lightweight quest/task evaluation logic
+│   │   └── Utilities/             # Random helpers & weighted pickers
+│   └── SlimeEvolution.Cli/        # Command-line playable prototype
 └── README.md
 ```
 
@@ -38,6 +40,17 @@ project or any other host runtime.
 
 3. Reference the library from a Unity project (via an Assembly Definition) or a
    separate gameplay simulation project to start integrating the systems.
+
+### Run the text prototype
+
+Launch the command-line sandbox to try the core breeding and economy loops:
+
+```bash
+dotnet run --project src/SlimeEvolution.Cli/SlimeEvolution.Cli.csproj
+```
+
+The prototype lets you inspect the breeding ground, trigger split cycles,
+review mutation logs, and sell slimes for gold directly from a terminal.
 
 ## Next steps
 
